@@ -20,6 +20,7 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         private static int lastInputDirectionRecordFrame;
 
         public static Direction inputDirection4Y => GetInputDirection4(true);
+        public static Direction inputDirection4X => GetInputDirection4(false);
 
         public static Direction GetInputDirection4(bool y = true)
         {
