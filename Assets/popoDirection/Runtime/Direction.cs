@@ -1,0 +1,13 @@
+using UnityEngine;
+
+namespace JuhaKurisu.PopoTools.DirectionUtility
+{
+    public abstract class Direction
+    {
+        public abstract Vector2Int vector2Int { get; }
+        public abstract Vector2 vector2 { get; }
+        public abstract Vector3Int vector3Int { get; }
+        public abstract Vector3 vector3 { get; }
+        public abstract int integer { get; }
+    }
+}
