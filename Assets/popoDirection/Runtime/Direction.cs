@@ -31,19 +31,26 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         }
 
         public static Direction ToDirection4(Vector2 vec, bool y = true)
-        {
-            if (vec == Vector2.zero) return noDirection;
+            => y ? ToDirection4Y(vec) : ToDirection4X(vec);
 
-            if (y)
-            {
-                if (vec.y > 0) return upDirection;
-                else return downDirection;
-            }
-            else
-            {
-                if (vec.x > 0) return rightDirection;
-                else return leftDirection;
-            }
+        public static Direction ToDirection4Y(Vector2 vec)
+        {
+            if (vec.y > 0) return upDirection;
+            if (vec.y < 0) return downDirection;
+            if (vec.x > 0) return rightDirection;
+            if (vec.x < 0) return leftDirection;
+
+            return noDirection;
+        }
+
+        public static Direction ToDirection4X(Vector2 vec)
+        {
+            if (vec.x > 0) return rightDirection;
+            if (vec.x < 0) return leftDirection;
+            if (vec.y > 0) return upDirection;
+            if (vec.y < 0) return downDirection;
+
+            return noDirection;
         }
     }
 }
