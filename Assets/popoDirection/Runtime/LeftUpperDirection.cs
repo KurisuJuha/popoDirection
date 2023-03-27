@@ -11,11 +11,6 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         public Vector3Int vector3Int => _vector3Int;
         private readonly Vector3Int _vector3Int = new(-1, 1);
         public Vector3 vector3 => _vector3;
-
-        public int oneAxisInteger => throw new System.NotImplementedException();
-
-        public float oneAxisFloat => throw new System.NotImplementedException();
-
         private readonly Vector3 _vector3 = new(-1, 1);
     }
 }

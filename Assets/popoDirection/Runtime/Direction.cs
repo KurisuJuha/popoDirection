@@ -7,23 +7,39 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         /// <summary>
         /// 右方向
         /// </summary>
-        public readonly static RightDirection rightDirection = new RightDirection();
+        public readonly static RightDirection rightDirection = new();
         /// <summary>
         /// 左方向
         /// </summary>
-        public readonly static LeftDirection leftDirection = new LeftDirection();
+        public readonly static LeftDirection leftDirection = new();
         /// <summary>
         /// 上方向
         /// </summary>
-        public readonly static UpDirection upDirection = new UpDirection();
+        public readonly static UpDirection upDirection = new();
         /// <summary>
         /// 下方向
         /// </summary>
-        public readonly static DownDirection downDirection = new DownDirection();
+        public readonly static DownDirection downDirection = new();
         /// <summary>
         /// 無方向
         /// </summary>
-        public readonly static NoDirection noDirection = new NoDirection();
+        public readonly static NoDirection noDirection = new();
+        /// <summary>
+        /// 右上方向
+        /// </summary>
+        public readonly static RightUpperDirection rightUpperDirection = new();
+        /// <summary>
+        /// 右下方向
+        /// </summary>
+        public readonly static RightLowerDirection rightLowerDirection = new();
+        /// <summary>
+        /// 左上方向
+        /// </summary>
+        public readonly static LeftUpperDirection leftUpperDirection = new();
+        /// <summary>
+        /// 左下方向
+        /// </summary>
+        public readonly static LeftLowerDirection leftLowerDirection = new();
 
         private static IDirection lastInputDirection;
         private static int lastInputDirectionRecordFrame;
