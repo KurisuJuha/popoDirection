@@ -9,6 +9,8 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         public abstract Vector3Int vector3Int { get; }
         public abstract Vector3 vector3 { get; }
         public abstract int integer { get; }
+
+        public readonly static RightDirection rightDirection = new RightDirection();
         public readonly static DownDirection downDirection = new DownDirection();
     }
 }
