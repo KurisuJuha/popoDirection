@@ -16,6 +16,18 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         public readonly static DownDirection downDirection = new DownDirection();
         public readonly static NoDirection noDirection = new NoDirection();
 
+        private static Direction lastInputDirection;
+        private static int lastInputDirectionRecordFrame;
+
+
+        public static Direction GetInputDirection4(bool y = true)
+        {
+            if (lastInputDirectionRecordFrame == Time.frameCount) return lastInputDirection;
+
+            lastInputDirection = ToDirection4(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), y);
+            return lastInputDirection;
+        }
+
         public static Direction ToDirection4(Vector2 vec, bool y = true)
         {
             if (vec == Vector2.zero) return noDirection;
