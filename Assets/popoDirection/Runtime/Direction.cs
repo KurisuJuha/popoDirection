@@ -14,5 +14,6 @@ namespace JuhaKurisu.PopoTools.DirectionUtility
         public readonly static LeftDirection leftDirection = new LeftDirection();
         public readonly static UpDirection upDirection = new UpDirection();
         public readonly static DownDirection downDirection = new DownDirection();
+        public readonly static NoDirection noDirection = new NoDirection();
     }
 }
